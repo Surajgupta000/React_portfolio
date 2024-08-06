@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home/Index';
+import About from './pages/About';
+import SkillDetail from './pages/SkillDetail'; // Ensure this import matches the filename
 import { useState, useEffect } from 'react';
 import Loader from './components/Loader';
 
@@ -19,12 +21,14 @@ function App() {
     // Cleanup timer on unmount
     return () => clearTimeout(timer);
   }, []);
-  
+
   return (
     <BrowserRouter>
       {showLoading ? <Loader /> : null}
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} /> {/* Add About route */}
+        <Route path='/skills/:skill' element={<SkillDetail />} /> {/* Add SkillDetail route */}
       </Routes>
     </BrowserRouter>
   );
