@@ -30,15 +30,15 @@ export default function Exp() {
           ))}
         </div>
         <div className="flex flex-col gap-5">
-          <h1 className="text-seconadry text-2xl">
+          <h1 className="text-tertiary text-2xl">
             {Experiences[selectedItemIndex].title}
           </h1>
-          <h1 className="text-seconadry text-2xl">
+          <h2 className="text-seconadry text-2xl">
             {Experiences[selectedItemIndex].company}
-          </h1>
-          <h1 className="text-white text-2xl">
+          </h2>
+          <h2 className="text-white text-1.5xl">
             {Experiences[selectedItemIndex].description}
-          </h1>
+          </h2>
          
         </div>
       </div>
