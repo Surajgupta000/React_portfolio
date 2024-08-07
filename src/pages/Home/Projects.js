@@ -38,7 +38,7 @@ export default function Projects() {
             {projects[selectedItemIndex].title}
           </h1>
          
-          <h1 className="text-white text-2xl">
+          <h1 className="text-white text-1.5xl">
             {projects[selectedItemIndex].description}
           </h1>
          
