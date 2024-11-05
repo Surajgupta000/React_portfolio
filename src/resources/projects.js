@@ -41,6 +41,46 @@ export const projects = [
                     description: "Study Notion is a remarkable EdTech platform, developed with modern technologies.",
                     link: "https://studynotion-frontend.vercel.app/",
                     },
+                    {
+                        technologies: [],
+                        _id: "123456789",
+                        title: "Guessing_Game",
+                        image: "https://sheysathya2.netlify.app/pizzas.svg",
+                        description: "This Guess the Number game challenges players to find a random number between 1-100. Each guess gives feedback: too high, too low, or invalid if out of range. Attempts are tracked, and on a correct guess, Congratulations! displays. The game auto-resets after 5 seconds for another round, encouraging improved guessing each time.",
+                        link: "https://guessing-game-ashen.vercel.app/",
+                        },
+                        {
+                            technologies: [],
+                            _id: "123456789",
+                            title: "Expense_Tracker",
+                            image: "https://sheysathya2.netlify.app/pizzas.svg",
+                            description: "Expense tracker is created using javascript's basics logic for track your expense and record it at the mean time. This project is created for learning purpose and to master javascript.",
+                            link: "https://expense-tracker-seven-plum.vercel.app/",
+                            },
+                            {
+                                technologies: [],
+                                _id: "123456789",
+                                title: "Timerupto_2025",
+                                image: "https://sheysathya2.netlify.app/pizzas.svg",
+                                description: "A timer created using Javascript for counting Number of days , Minutes and seconds remaining for 2025 year. It is just a project for learning purpose and understanding the concept of javascript.",
+                                link: "https://timerupto-2025.vercel.app/",
+                                },
+                                {
+                                    technologies: [],
+                                    _id: "123456789",
+                                    title: "DSA Revision_Landing_page",
+                                    image: "https://sheysathya2.netlify.app/pizzas.svg",
+                                    description: "",
+                                    link: "https://dsa-revision-landingpage.vercel.app/",
+                                    },
+                                    {
+                                        technologies: [],
+                                        _id: "123456789",
+                                        title: "HosterPage",
+                                        image: "https://sheysathya2.netlify.app/pizzas.svg",
+                                        description: "A hoster landing page created with tailwind css.",
+                                        link: "https://hoster-landing-ten.vercel.app/",
+                                        },
 
     
 ];

@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home/Index';
 import { useState, useEffect } from 'react';
@@ -7,25 +7,27 @@ import Loader from './components/Loader';
 function App() {
   const [showLoading, setShowLoading] = useState(true);
 
-  // Simulate loading process with useEffect
   useEffect(() => {
-    console.log('useEffect running'); // Log to check if useEffect is running
-    // Simulate a loading delay
+    console.log('useEffect running');
     const timer = setTimeout(() => {
-      console.log('Timer finished'); // Log to check if timer completes
+      console.log('Timer finished');
       setShowLoading(false);
-    }, 2000); // Adjust the delay as needed
+    }, 2000);
 
-    // Cleanup timer on unmount
     return () => clearTimeout(timer);
   }, []);
   
   return (
-    <BrowserRouter>
-      {showLoading ? <Loader /> : null}
-      <Routes>
-        <Route path='/' element={<Home />} />
-      </Routes>
+    <BrowserRouter basename={process.env.PUBLIC_URL || '/'}>
+      {showLoading ? (
+        <Loader />
+      ) : (
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* Add fallback route to handle unmatched paths */}
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      )}
     </BrowserRouter>
   );
 }

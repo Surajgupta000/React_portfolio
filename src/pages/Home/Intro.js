@@ -1,6 +1,18 @@
-import React from "react";
+// Intro.js
+import React, { useState } from "react";
+import ContactFormModal from "./ContactFormModal"; // Adjust the path as necessary
 
-export default function Intro() {
+const Intro = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleGetStartedClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="h-[80vh] bg-primary flex flex-col items-start justify-center gap-8 py-10">
       <h1 className="text-white">Hii , I am</h1>
@@ -15,9 +27,14 @@ export default function Intro() {
         in touch if you'd like to collaborate on your next project. Let's create
         something amazing together!
       </p>
-      <button className="border-2 border-tertiary text-tertiary px-10 py-3  rounded">
+      <button onClick={handleGetStartedClick} className="border-2 border-tertiary text-tertiary px-10 py-3 rounded">
         Get Started
       </button>
+
+      {/* Modal Component */}
+      <ContactFormModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
-}
+};
+
+export default Intro;
